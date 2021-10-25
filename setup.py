@@ -21,15 +21,16 @@ for ext in ['md','rst']:
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
-    name='geoage-calculator',
+    name='geoage_calculator',
+    packages=find_packages(),
     version=__version__,
     author='Sam Jennings',
+    author_email='samuel.jennings@adelaide.edu.au',
     license='MIT',
     description='Simple functions for dealing with datasets that contain incosistently formatted geological age data.',
     long_description=README,
     url=REPO_URL,
     download_url=REPO_URL + 'releases/tag/v' + __version__,
-    packages=find_packages(),
     include_package_data=True,
     install_requires=[],
     zip_safe=False,
