@@ -2,38 +2,25 @@
 # -*- coding: utf-8 -*-
 
 import os
-
-from setuptools import find_packages, setup
+from setuptools import setup
 from geoage_calculator import __version__
 
-REPO_URL = "https://github.com/SSJenny90/geoage-calculator"
-
-README = ''
-for ext in ['md','rst']:
-    try:
-        with open(os.path.join(os.path.dirname(__file__), 'README.' + ext)) as readme:
-            README = readme.read()
-    except FileNotFoundError as fnfe:
-        pass
-
+REPO_URL = "https://github.com/SSJenny90/geoage-calculator/"
 
 # allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='geoage_calculator',
-    packages=find_packages(),
+    packages='geoage_calculator',
     version=__version__,
     author='Sam Jennings',
     author_email='samuel.jennings@adelaide.edu.au',
     license='MIT',
     description='Simple functions for dealing with datasets that contain incosistently formatted geological age data.',
-    long_description=README,
     url=REPO_URL,
-    download_url=REPO_URL + 'releases/tag/v' + __version__,
-    include_package_data=True,
+    download_url=REPO_URL + 'archive/refs/tags/v' + __version__ +'.tar.gz',
     install_requires=[],
-    zip_safe=False,
     keywords='scientific geology geochronology stratigraphy',
     classifiers=[
         'Development Status :: 5 - Production/Stable',
@@ -46,6 +33,7 @@ setup(
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.8',
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     ],
