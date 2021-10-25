@@ -9,6 +9,7 @@ At the moment this package is only available via git. You can either download th
 ## How to use
 For a reported geological age in name format, e.g. 'Cryogenian', `age_range_lookup` will convert this to a tuple consisting of upper and lower age bounds. Over 750 official and unofficial geological names are currently supported.
 
+    >>>from geoage_calculator import age_range_lookup, geo_age_lookup
     >>>age_range_lookup('Cryogenian')
     (37.2, 40.4)
 
