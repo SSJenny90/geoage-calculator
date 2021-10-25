@@ -4,8 +4,7 @@
 import os
 
 from setuptools import find_packages, setup
-
-__version__ = 1.0.0
+from geoage_calculator import __version__
 
 REPO_URL = "https://github.com/SSJenny90/geoage-calculator"
 
